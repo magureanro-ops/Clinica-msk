@@ -13,7 +13,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, unquote
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-WEB_ROOT = os.path.abspath(os.path.join(ROOT, ".."))
+WEB_ROOT = ROOT if os.path.isfile(os.path.join(ROOT, "index.html")) else os.path.abspath(os.path.join(ROOT, ".."))
 DB_PATH = os.path.join(ROOT, "msk.db")
 HOST = os.environ.get("MSK_HOST", "0.0.0.0")
 PORT = int(os.environ.get("PORT") or os.environ.get("MSK_PORT", "8787"))
