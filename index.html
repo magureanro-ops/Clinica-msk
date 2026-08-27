@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="description" content="Clinica MSK – triaj dinamic și dosar consult" />
+  <title>Clinica MSK</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="topbar">
+      <div class="brand" onclick="App.go('home')">Clinica MSK</div>
+      <div class="topbar-actions">
+        <button type="button" class="btn-ghost" id="btn-role" title="Schimbă rol">Pacient</button>
+      </div>
+    </header>
+
+    <main id="main" class="main"></main>
+
+    <footer class="footer">
+      <span id="footer-hint">Aplicație separată · date locale (prototip)</span>
+    </footer>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/scores.js"></script>
+  <script src="js/triage.js"></script>
+  <script src="js/doctor.js"></script>
+  <script src="js/consult.js"></script>
+  <script src="js/kineto.js"></script>
+  <script src="js/followup.js"></script>
+  <script src="js/homecare.js"></script>
+  <script src="js/demo.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js").catch(function () {});
+    }
+  </script>
+</body>
+</html>

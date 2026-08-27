@@ -1,0 +1,10 @@
+{
+  "name": "Clinica MSK",
+  "short_name": "MSK",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f766e",
+  "theme_color": "#0f766e",
+  "lang": "ro",
+  "description": "Triaj dinamic și consult MSK"
+}
