@@ -1,0 +1,1 @@
+# Nicio librărie externă — serverul folosește doar Python standard.
